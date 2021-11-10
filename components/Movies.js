@@ -1,11 +1,11 @@
-import { useState, useContext, useEffect, createContext } from 'react';
+import { useContext } from 'react';
 import movies from '../movies.json';
 import EachMovie from './EachMovie';
 /*panther je velika slika zato sto je posebno ubacena i ovo je njena normalna velicina css nema veze ovdje* */
 import classes from '../styles/Movie.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faStepBackward } from "@fortawesome/free-solid-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowLeft, faStepBackward } from "@fortawesome/free-solid-svg-icons";
+// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import MovieContext from '../store/movieContext';
 import MoviesSlider from './MoviesSlider';
 
@@ -58,10 +58,11 @@ const Movies = () => {
             <MoviesSlider sliderMovies={movies} text='all movies' />
             <div className={classes.blocking}>
                 {value && filtered.map((movie, index) => <EachMovie key={index} movie={movie} />)}
-                {filtered.length <= 0 && value && <p>Sorry, we currently don't have movie you are looking for</p>}
+                {filtered.length <= 0 && value && <p>Sorry, we currently don&apos;t have movie you are looking for</p>}
             </div>
         </div >
     )
+
 }
 
 export default Movies

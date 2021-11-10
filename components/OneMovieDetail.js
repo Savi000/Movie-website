@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import MovieContext from "../store/movieContext";
-import Image from 'next/image';
+// import Image from 'next/image';
 import classes from '../styles/Movie.module.css';
 import Nav from '../components/Nav'
-import { urlObjectKeys } from "next/dist/shared/lib/utils";
+// import { urlObjectKeys } from "next/dist/shared/lib/utils";
 
 const OneMovieDetail = ({ movie }) => {
 
@@ -11,19 +11,19 @@ const OneMovieDetail = ({ movie }) => {
 
     const [removeGradient, setRemoveGradient] = useState(false);
 
-    const { addToWatchList, isAddedToList } = useContext(MovieContext);
+    const { addToWatchList } = useContext(MovieContext);
 
     // isAddedToList je za button disabled ali to ne moze posto je jedan button isti za sve ove i onda
     //kad kliknes na jedan svi su disabld
 
-    const myLoader = ({ src }) => {
-        return posterurl;
-    }
+    // const myLoader = ({ src }) => {
+    //     return posterurl;
+    // }
     useEffect(() => {
         if (window.matchMedia("(max-width: 653px)").matches) {
             setRemoveGradient(true);
         }
-    }) /**POGLEDAJ MADA nije obavezno ono samo vidi ako moze na  change */
+    }, [])/* BILO BEZ OVE ZAGRADE TADA JE RADILO */ /**POGLEDAJ MADA nije obavezno ono samo vidi ako moze na  change */
 
     return (
         <>

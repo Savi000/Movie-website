@@ -1,5 +1,5 @@
 import classes from "../styles/Nav.module.css";
-import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
@@ -8,7 +8,7 @@ import MovieContext from "../store/movieContext";
 import Image from "next/image";
 
 const Nav = () => {
-  const [focus, setFocus] = useState(false);
+  // const [focus, setFocus] = useState(false);
 
   const { inputValue, value } = useContext(MovieContext);
 

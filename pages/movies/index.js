@@ -1,4 +1,4 @@
-import { useRouter } from 'next/dist/client/router';
+// import { useRouter } from 'next/dist/client/router';
 import Movies from '../../components/Movies'
 import Nav from '../../components/Nav'
 import classes from '../../styles/Movie.module.css';
@@ -6,7 +6,7 @@ import classes from '../../styles/Movie.module.css';
 
 const index = () => {
 
-    const router = useRouter();
+    // const router = useRouter();
 
 
 

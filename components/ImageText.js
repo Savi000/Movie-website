@@ -14,10 +14,10 @@ const ImageText = () => {
   const [current, setCurrent] = useState(0);
   const [stopEffect, setStopEffect] = useState(false);
   const [textLength, setTextLength] = useState(false);
-
+  // const [length, setLength] = useState(0);
   let mainPageMovies = movies.slice(1, 6);
   const length = mainPageMovies.length;
-
+  // bilo samo const length = mainPageMovies.length i radlo
   const { addToWatchList } = useContext(MovieContext);
 
   /*odje kad stavis 2sec to se samo jednom desava zato nam treba setInterval* */
@@ -31,10 +31,7 @@ const ImageText = () => {
   //   setCurrent(current === 0 ? length - 1 : current - 1);
   // };
 
-  if (!Array.isArray(mainPageMovies) || mainPageMovies.length <= 0) {
-    console.log(mainPageMovies);
-    return null;
-  }
+
   // if (!stopEffect) {
   //   if (current <= length - 1) {
   //     useEffect(() => {
@@ -100,7 +97,9 @@ const ImageText = () => {
         return () => {
           clearInterval(timeout);
         };
-      } else {
+      }  /*ne moze use effect conditionally mora da ima jednu default radnnju zato micem ovo else ovdje
+        bilo else{setCurrent(0)}*/
+      else {
         setCurrent(0);
       }
     }
@@ -111,6 +110,11 @@ const ImageText = () => {
       setTextLength(true);
     }
   }, [textLength]);
+
+  if (!Array.isArray(mainPageMovies) || mainPageMovies.length <= 0) {
+    console.log(mainPageMovies);
+    return null;
+  }
 
   return (
     <main className={classes.main}>
@@ -157,9 +161,10 @@ const ImageText = () => {
 
               <h4 className={classes.starsHeading}>STARS</h4>
 
-              {movies[0].actors.map((actor) => (
-                <a
+              {movies[0].actors.map((actor, index) => (
+                <a key={index}
                   target="_blank"
+                  rel='noreferrer'
                   href={`https://www.google.com/search?q=${actor}`}
                   style={{ display: "inline-block", marginRight: "20px" }}
                 >
@@ -224,7 +229,7 @@ const ImageText = () => {
       <div className={classes.responsiveSlider}>
         <h2>Movies you might be interested in:</h2>
         {mainPageMovies.map((movie) => (
-          <EachMovie movie={movie} />
+          <EachMovie key={movie.id} movie={movie} />
         ))}
       </div>
     </main>

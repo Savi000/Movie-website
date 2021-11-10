@@ -1,15 +1,15 @@
-import { useContext, useState } from "react";
+// import { useContext, useState } from "react";
 import classes from "../styles/Slider.module.css";
 import Link from "next/link";
-import MovieContext from "../store/movieContext";
+// import MovieContext from "../store/movieContext";
 import Image from "next/image";
 
 const Slider = ({ movie, index, current }) => {
   //const img = useRef();
 
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
 
-  const { addToWatchList } = useContext(MovieContext)
+  // const { addToWatchList } = useContext(MovieContext)
 
 
 

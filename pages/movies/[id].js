@@ -1,19 +1,19 @@
 import { useRouter } from 'next/dist/client/router';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import OneMovieDetail from '../../components/OneMovieDetail';
 import movies from '../../movies.json'; /**kad bi fetchovali samo bi ga stavili u context i uzimali 
 iz sa useContext */
-import MovieContext from '../../store/movieContext';
+// import MovieContext from '../../store/movieContext';
 import EachMovie from '../../components/EachMovie';
-import Link from 'next/dist/client/link';
+// import Link from 'next/dist/client/link';
 import classes from '../../styles/Movie.module.css';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const MovieDetails = () => {
 
     const [oneMovie, setOneMovie] = useState([]);
 
-    const { addToWatchList, isAddedToList } = useContext(MovieContext)
+    // const { addToWatchList, isAddedToList } = useContext(MovieContext)
 
     /**actors array */
     const router = useRouter();
@@ -35,10 +35,10 @@ const MovieDetails = () => {
 
     let allButOneMovie = movies.filter((movie) => movie.id !== oneMovie.id)
 
-    const myLoader = ({ src, width }) => {
-        console.log(width);
-        return src;/**GUGLAJ OVO JOS MALO PROVJERI JER OVAJ WIDTH PROPERTY ODJE RADI TJ CONSOLE.LOG-UJU SE BROJEVI KOJI POKAZUJU SIRINU PA SE SAD VJ TO STAVLJA U LINK ONAJ PUN PATH HTTP I DEFINISES MU JOS WIDTH I OND NE BI MORAO VLJD UNOPTIMIZED MOJA TEORIJA */
-    }
+    // const myLoader = ({ src, width }) => {
+    //     console.log(width);
+    //     return src;/**GUGLAJ OVO JOS MALO PROVJERI JER OVAJ WIDTH PROPERTY ODJE RADI TJ CONSOLE.LOG-UJU SE BROJEVI KOJI POKAZUJU SIRINU PA SE SAD VJ TO STAVLJA U LINK ONAJ PUN PATH HTTP I DEFINISES MU JOS WIDTH I OND NE BI MORAO VLJD UNOPTIMIZED MOJA TEORIJA */
+    // }
 
     return (
         <div className={classes.movieDetailPage}>
