@@ -1,0 +1,68 @@
+.aboutPage {
+  position: relative;
+  height: 100vh;
+  background: black; /*samo privremeno dok ne rjesim problem sa webpackom i videoom*/
+}
+.aboutPage h1 {
+  margin-left: 40%;
+  width: fit-content;
+  color: white;
+  /* text-align: center; */
+  animation: headerAnimation 3s;
+}
+.textOne {
+  position: fixed;
+  top: 30%;
+  width: 30%;
+  margin-left: 7%;
+  color: white;
+  animation: textAnimation 3s;
+}
+.textTwo {
+  position: fixed;
+  left: 65%;
+  top: 50%;
+  color: white;
+  width: 30%;
+  float: right;
+  margin-right: 7%;
+  /* margin-top: -20vh; */
+  animation: headerAnimation 3s;
+}
+
+@keyframes headerAnimation {
+  from {
+    visibility: hidden;
+    left: 120%;
+  }
+  to {
+    visibility: visible;
+    left: 65%;
+  }
+}
+
+@keyframes textAnimation {
+  from {
+    visibility: hidden;
+    left: -20%;
+  }
+  to {
+    visibility: visible;
+    left: 0%;
+  }
+}
+
+/* .bgVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+} */
+
+@media (min-width: 1000px) {
+  .aboutPage {
+    overflow: hidden;
+    height: 100vh;
+  }
+}

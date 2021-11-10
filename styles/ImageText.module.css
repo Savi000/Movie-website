@@ -1,0 +1,231 @@
+.main {
+  color: white;
+  overflow-x: hidden;
+}
+.all {
+  display: flex;
+  justify-content: space-between;
+}
+.otherMovies {
+  width: 30%;
+}
+.responsiveSlider {
+  display: none;
+}
+
+.aboutMovie {
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* flex-flow: column; */
+  padding-bottom: 300px;
+  /* padding-bottom: 1200px; */
+  margin-top: 12vh;
+  width: 110%;
+
+  /* flex-flow: column; */
+  /* align-items: baseline; */
+  /* margin-top: 315px; */
+  /* margin-top: 20%; */
+  /* position: absolute; */
+  /* bottom: 0; */
+  background-color: turquoise;
+  opacity: 0.7;
+  border-radius: 0px 70px 0px 0px;
+}
+.category {
+  padding-left: 5em;
+  /* width: 50%; */
+}
+.storyLine {
+  /* width: 50 */
+}
+
+.mainMovieName {
+  padding-left: 10%;
+}
+.mainMovieName h1 {
+  width: 70%;
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+.mainMovieName p {
+  width: 70%;
+  color: gray;
+  font-size: 1.2rem;
+  border-bottom: 2px dotted gray;
+  margin-bottom: 5%;
+}
+.mainMovieName button {
+  background: purple;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  margin-right: 10px;
+  /* PROVJERI MOZDA BUDE SMETAO OVAJ MARGIN JER JE NA OBA BTN-A */
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.mainMovieName button:hover {
+  transition: 1s;
+  background: red;
+  /* color: black; */
+}
+.readMoreBtn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+.readMoreBtn:hover {
+  color: red;
+}
+/* .rightArrow {
+  cursor: pointer;
+  float: right;
+}
+.leftArrow {
+  cursor: pointer;
+} */
+.containerDots {
+  display: flex;
+  /* margin-top: 10%; */
+  /* margin-right: 30%; */
+  /* margin-top: -95vh; zbog visine background image pogledaj u homa.module.css */
+  justify-content: center;
+  margin-bottom: 10px;
+  /* position: absolute;
+  top: 43%;
+  right: 4%;
+  transform: translate(-50%); */
+}
+
+.dot {
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #f1f1f1;
+  margin: 0 5px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 1s;
+}
+.dotActive {
+  transition: 1s;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f1f1f1;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: rgb(32, 32, 32);
+}
+@media (min-width: 1500px) and (max-width: 1920px) {
+  .aboutMovie {
+    margin-top: 25vh;
+  }
+}
+/* @media (min-width: 1820px) and(max-width: 1920px) {
+  .aboutMovie {
+    margin-top: 20vh;
+  }
+} */
+@media (min-width: 1920px) {
+  .aboutMovie {
+    margin-top: 35vh; /*75% je 1920px*/
+  }
+}
+
+@media (max-width: 1400px) {
+  .mainMovieName h1 {
+    font-size: 2.5rem;
+  }
+  /* .aboutMovie {
+    margin-top: 5%;
+    padding-bottom: 5%;
+     height: 42vh; 
+  }*/
+}
+
+@media (min-width: 1000px) {
+  .rightArrow,
+  .leftArrow {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .aboutMovie {
+    width: 70vw;
+    padding-bottom: 65px;
+  }
+}
+
+@media (max-width: 850px), (max-width: 1100px) and (min-height: 800px) {
+  .otherMovies {
+    display: none;
+  }
+  .responsiveSlider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .responsiveSlider p {
+    display: none;
+  }
+  .responsiveSlider h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .mainMovieName {
+    padding-left: 1.5%;
+  }
+  .mainMovieName h1 {
+    width: 100vw; /*100% ne moze zato sto parent nije adekvatan */
+  }
+  .mainMovieName p {
+    width: 100vw;
+  }
+  .watchListBtn {
+    float: right;
+  }
+
+  .aboutMovie {
+    border-radius: 0;
+    min-width: 103%;
+    padding: 0;
+    /*  ZASTO MORA 110  moze ovo ali samo da nadjem uzrok sta koci about movie */
+  }
+  .storyLine {
+    padding-left: 1em;
+  }
+  .readMoreBtn {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 458px) {
+  /* .readMoreBtn {
+    margin-top: -25px;
+  } */
+  /* .starsHeading {
+    margin-top: -15px;
+  } */
+  .category {
+    display: none;
+  }
+}
+
+@media (max-width: 385px) {
+  .mainMovieName button {
+    padding: 12px 22px;
+    margin: 0;
+  }
+}

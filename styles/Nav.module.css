@@ -1,0 +1,303 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-top: 3px solid white; */
+}
+
+.link {
+  color: gray;
+  cursor: pointer;
+  border-top: 3px solid white;
+  /* padding: 30px 70px; */
+  padding: 2.7% 70px;
+  /* padding: 4vh 5vw; na veci screen pading na manji dodaj border */
+}
+.link:hover {
+  transition: 0.5s;
+  color: white;
+  border-top: 3px solid purple;
+}
+.link:active {
+  /* border-top: 3px solid rgba(purple, 0.5); */
+  /* border-top: red; */
+}
+.active {
+  /* padding: 30px 70px; */
+  padding: 2.7% 70px;
+  cursor: pointer;
+  border-top: 3px solid purple;
+  color: white;
+}
+.navForm button {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.navForm input {
+  outline: none;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid gray;
+}
+.navForm::placeholder {
+  color: gray;
+}
+/* .hamburgerButton {
+  display: none;
+  margin-right: 3%;
+  cursor: pointer;
+} */
+
+.hamburgerButton {
+  display: none;
+}
+
+/* .hamburgerButtonActive {
+  font-size: 20px;
+  color: white;
+  transition: 1s; /*ymjesto ove klase ono stavi x to je laganica nema veze sa responsive*/
+/* margin-right: 10%;
+}  */
+@media (min-width: 1200px) {
+  .link {
+    /* padding: 6vh 3vw;  */
+    padding: 3.1% 80px;
+    /* border-top: 3px solid white; */
+  }
+  /* .link:hover { */
+  /* border-top: 3px solid purple; */
+  /* } */
+  .active {
+    /* padding: 6vh 3vw;  */
+    padding: 3.1% 80px;
+    /* border-top: 3px solid purple; */
+  }
+}
+
+@media (max-width: 1200px) {
+  /* kad ovo stavis pojavljuju se white-spaces sa desne strane to se rijesava sa max-width no problemo  */
+  .link {
+    /* padding: 6vh 3vw;  */
+    padding: 5.8% 30px;
+  }
+  .active {
+    /* padding: 6vh 3vw;  */
+    padding: 5.8% 30px;
+  }
+}
+/* @media (min-width: 1400px) { */
+/* kad ovo stavis pojavljuju se white-spaces sa desne strane to se rijesava sa max-width no problemo  */
+/* .link {
+    border-top: 6px solid white;
+    padding: 3.5vh 5vw;
+  }
+  .link:hover {
+    border-top: 6px solid purple;
+  }
+  .active {
+    padding: 3.5vh 5vw;
+    border-top: 6px solid purple;
+  }
+}
+@media (min-width: 1700px) {
+  .link {
+    border-top: 6px solid white;
+    padding: 3vh 5vw;
+  }
+  .link:hover {
+    border-top: 6px solid purple;
+  }
+  .active {
+    padding: 3vh 5vw;
+    border-top: 6px solid purple;
+  }
+} */
+/* @media (min-width: 850px) and (min-height: 647px) {
+  .bgImage {
+    height: 100vh;
+    overflow: hidden;
+  }
+} */
+
+@media (max-width: 845px) {
+  /*ZASTO odje se ne brejkuje na 850 nego na 838 zato sto je napisano tako hahahahahahah*/
+  /* .hamburgerButton {
+    display: flex;
+  } */
+  #hamburgerButton {
+    display: flex;
+    width: 45px;
+    height: 25px;
+    /* position: sticky; ne radi ako je overflow x ili y nebitno hidden auto,... osim ako je obicni*/
+    /* position: relative;bilo */
+    /* position: fixed; ne radi jer je position fixed maknut iz normalnog flow-a dokumenta i za ovaj div nije kreiran prostor */
+    /* right: 0; */
+    /* margin-right: 1%; */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  #hamburgerButton span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 70%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  #hamburgerButton span:nth-child(1) {
+    top: 0px;
+  }
+
+  #hamburgerButton span:nth-child(2) {
+    top: 10px;
+  }
+
+  #hamburgerButton span:nth-child(3) {
+    top: 20px;
+  }
+
+  #hamburgerButton.open span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  #hamburgerButton.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+
+  #hamburgerButton.open span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+
+  .hideHamburgerMenu {
+    /* position: absolute; */
+    /* visibility: hidden; */
+    /* right: -10%; */
+    /* top: 12%; */
+    /* width: 20%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* z-index: 1000; */
+    /* visibility: hidden; */
+    /*cursor: not-allowed;*/
+    /* position: absolute; */
+    /* flex-direction: column; dadadada  ovo je skriveni div ovo su di */
+    /* opacity: 0; */
+    /* transform: translateX(50px); */
+
+    position: fixed; /*ne radi sa absolute zamisliii*/
+    /* width: 20%; */
+    top: 12%;
+    right: -300%; /*nav ne moze da stane zbog fiksiranog paddinga oko linkova i fiksiranog font size-a kad smanjujemo screen i onda se preplice i kad stavimo -100% ode ono sto je u jedan red a ovo se taman ispravi i bude sve jedno do drugog mozes vidjeti ako stavis right 0 na screen <500px
+    */
+  }
+  .displayHamburgerMenu {
+    /*sliding menu with links*/
+    transition: 0.5s;
+    position: fixed; /* ne radi sa absolute zamisliii ima korektan razlog u css and animations folderu*/
+    width: 100%;
+    height: 100%; /*da napravimo za linkove da mogu da se prosire sad njima davamo height posle ovoga*/
+    top: 15%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    z-index: 1000;
+    /* position: absolute; */
+    /* right: 0%;hamburgerButton
+    top: 12%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; ne radi*/
+    /* animation: slide 2s; */
+    /* opacity: 1; */
+    /* transform: translateX(0px); */
+    /* display: flex; */
+    /* position: absolute; */
+    /* top: 12%; */
+    /* right: 0%; */
+    /* width: 20%; */
+    /* z-index: 1000; xdddd zato sto je details btn z-ind 999 */
+    /* width: 40%; zbog ovoga se pojavljuje(svakako se pojavljuje ali bez width se ne vidi) onaj stari menu i onda se stvara bjelina sa lijeve strane zasto */
+    /* transform: translate(-50%); evo problema sto linkovi idu izvan ekrana a ovo je divv pa zatoo nije ovo taj aktivni link nego div jaraaa */
+    /* flex-direction: column; */
+    /* transition: 1s; */
+    /* animation: mikiMausAnimacija 2s; */
+  }
+  .link {
+    color: gray;
+    cursor: pointer;
+    border: none;
+    background: tan;
+    z-index: 1000;
+    height: 21.5%;
+    padding: 9.5vh;
+
+    /* animation: mikiMausAnimacija 2s; */
+    /* animation-delay: 2s,  */
+  }
+  .link:hover {
+    color: white;
+    border: none;
+  }
+  .active {
+    padding: 6.8vh; /*zato sto je ovo nastavak sa onog gore nav-a koji je obican tj. nije hamburger i ima padding i ove klase(.link i .active) imaju sce property njih samo ih mi sad ovdje mjenjamo*/
+    background: turquoise;
+    height: 21.5%;
+    cursor: pointer;
+    border: none;
+    color: white;
+    z-index: 1000;
+    padding: 9.5vh;
+
+    /* animation: mikiMausAnimacija 1s; */
+    /* animation-delay: 2s, 0.5s; */
+  }
+}
+
+@media (max-width: 340px) {
+  .searchIcon {
+    display: none;
+  }
+}
+
+/* @media (min-width: 2520px) {
+  .link,
+  .active {
+    padding: 28px 70px;
+  }
+} */

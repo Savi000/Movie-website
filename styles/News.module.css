@@ -1,0 +1,52 @@
+/*NO NEWS*/
+.all {
+  background: black;
+}
+
+.allNews {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.allNews button {
+  border: none;
+  cursor: pointer;
+  background: black;
+  width: 100%;
+  position: absolute;
+  top: 107%;
+  font-size: 36px;
+  color: white;
+}
+.oneArticle {
+  margin-right: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.oneArticle:hover {
+  transition: 1s;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.oneArticle p {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 62%;
+  left: 30%;
+  transform: translate(-30%, -50%);
+  z-index: 999;
+  width: 101%;
+  height: fit-content;
+
+  color: white;
+}
+
+.articleImage {
+  margin-bottom: 6px;
+  /* height: 30vh;
+  width: 20vw; */
+}
+/*media screen width 100%*/

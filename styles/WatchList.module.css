@@ -1,0 +1,25 @@
+.watchListMovies {
+  text-align: center;
+}
+.watchListMovies button {
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 10px 15px;
+  border: none;
+  background: white;
+  transition: 0.5s;
+}
+
+.trashIcon {
+  color: red;
+}
+.watchListMovies button:hover {
+  background: red;
+  color: white;
+}
+.watchListMovies button:hover > .trashIcon {
+  color: white;
+}

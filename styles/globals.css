@@ -1,9 +1,16 @@
 html,
 body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  /* min-width: fit-content;ne stavljaj ovo useres movies page */
   padding: 0;
   margin: 0;
+
+  background: black;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* border-top: 3px solid white; */
 }
 
 a {
@@ -14,3 +21,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* @media (max-width: 420px) {
+  body {
+    width: 100vw;
+  }
+} */
