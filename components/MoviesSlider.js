@@ -18,10 +18,6 @@ const MoviesSlider = ({ sliderMovies, text }) => {
     
     const [translatePopular, setTranslatePopular] = useState(0);
 
-    // const [kolikoihstane, setKolikoIhStane] = useState(0);
-    // const [sliceFrom, setSliceFrom] = useState(0);
-
-
     const { value, divWidth } = useContext(MovieContext);
 
     useEffect(() => {
