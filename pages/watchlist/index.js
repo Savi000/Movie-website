@@ -2,11 +2,12 @@ import React, { useContext, useEffect } from 'react'
 import Nav from '../../components/Nav'
 import MovieContext from '../../store/movieContext'
 import WatchListMovie from '../../components/WatchListMovie';
-import WatchList from '../../components/WatchListMovie';
+// import WatchList from '../../components/WatchListMovie';
 // import EachMovie from '../../components/EachMovie';
 // import classes from '../../styles/Movie.module.css';
 // import OneMovieDetail from '../../components/OneMovieDetail';
 // import WatchList from '../../components/WatchListMovie';
+import WatchList from '../../components/WatchList';
 
 const index = () => {
     // const { watchList, } = useContext(MovieContext); NE MOZE
