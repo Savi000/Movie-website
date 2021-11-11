@@ -5,7 +5,7 @@ import classes from '../styles/WatchList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const WatchList = ({ movie }) => {
+const WatchListMovie = ({ movie }) => {
 
     const { removeItem } = useContext(MovieContext);
 
@@ -24,4 +24,4 @@ const WatchList = ({ movie }) => {
     )
 }
 
-export default WatchList
+export default WatchListMovie
