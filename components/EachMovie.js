@@ -15,9 +15,6 @@ const EachMovie = ({ movie, }) => {
     const { posterurl, title, year, id, storyline } = movie;
 
 
-
-    /**ima mnogo nacina ali moze ovaj sad proci jer nema previse ovih parametara */
-
     const router = useRouter();
 
 
