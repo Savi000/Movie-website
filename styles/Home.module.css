@@ -1,8 +1,7 @@
 .bgImage {
   min-width: fit-content;
   background-image: url("https://wallpaperaccess.com/full/811658.jpg");
-  */background-position: center;*/
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
