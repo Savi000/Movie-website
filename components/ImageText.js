@@ -20,74 +20,6 @@ const ImageText = () => {
   // bilo samo const length = mainPageMovies.length i radlo
   const { addToWatchList } = useContext(MovieContext);
 
-  /*odje kad stavis 2sec to se samo jednom desava zato nam treba setInterval* */
-
-  // const nextSlide = () => {
-  //   setCurrent(current === length - 1 ? 0 : current + 1);
-  //   console.log(mainPageMovies);
-  // };
-
-  // const prevSlide = () => {
-  //   setCurrent(current === 0 ? length - 1 : current - 1);
-  // };
-
-
-  // if (!stopEffect) {
-  //   if (current <= length - 1) {
-  //     useEffect(() => {
-  //       setInterval(() => {
-  //         setCurrent(prev => prev + 1)
-  //       }, 4000)
-  //     }, [])
-
-  //   } else {
-  //     setCurrent(0)
-  //   }
-  // } use Effect ne moze biti pozvan conditionally(if/else)
-
-  // useEffect(() => {
-  //   if (!stopEffect) {
-  //     if (current <= length - 1) {
-  //       setCurrent(prev => prev + 1)
-  //     }
-  //     else {
-  //       setCurrent(0)
-  //     }
-  //   }
-
-  // }, 2000)
-
-  /**VEZANO ZA LOADING SPINNER TJ KAD SE PAGE LOADUJE MOZDA WINDOW.ADDEVENTLISTER('LOAD',SPINNER) */
-
-  // setInterval(() => {
-  //   if (current <= length - 1)
-  //     setCurrent(prev => prev + 1)
-  //   else {
-  //     setCurrent(0)
-  //   }
-  // }, 2000)   MORA U USEEFFECT ZBOG RE-RENDERA KOJI JE UZROKOVAN USE STATE-OM(moja/tacna teorija...) i onda uzrokuje previse poziva jer ovo se re-renderuje kad se current promjeni zato sto  je current definsan useState-om e ovo je jedan od sideEffects zato nam treba useState koji stavim i da se ovo desava samo jednom kad renderujemo page ili vise puta nebitno ali mora biti u useEffect inace ce uzrokovati bugove,infinite loops,...  111 lekcija udemy react kurs
-
-  // useEffect(() => {
-  //   if (current <= length - 1) {
-  //     setInterval(() => {
-  //       setCurrent(prev => prev + 1)
-  //     }, 4000)
-  //   } else {
-  //     setCurrent(0)
-  //   }
-  // }, [current])/** ovo ne radi zato sto na svaku promjenu currenta se pokrece if else  evo prvo pokrenes i on gleda if else i u zavisnosti sta je mora promjeniti current i cim se to promjeni on odma ponovo zove if else nece cekati 4sec zato sto se current promjenio*/
-
-  /**e sad pitanje je zasto ne moze unutar nego moram if izvan ovoga da pisem znaci if ne moze ni unutar
-  useEffect ni unutar setInterval samo izvan kao sad 
-  zato sto se useEffect samo jednom pokrene i procita if else a setInterval svako dvije sekunde,
-  a ne cita if else vec samo setInterval jer ovako kako sam postavio useEffect samo se jednom pozove zbog[]
-  i samim tim kad je if/else unutar onda procita to prvi put a tad je current < length i onda samo poziva setInreval i vise ne gleda if else jer se to samo jednom pozove
-  */
-
-  // setInterval(() => {
-  //   setCurrent(prev => prev + 1)
-  // }, 2000)
-
   useEffect(() => {
     if (!stopEffect) {
       if (current <= length - 1) {
@@ -187,15 +119,9 @@ const ImageText = () => {
             attention pleaaseesssees will thereal slimshat
           </p>
 
-          <section /*slider*/>
-            {/* <FaArrowAltCircleLeft className={classes.leftArrow} onClick={prevSlide} />
-
-            <FaArrowAltCircleRight
-              className={classes.rightArrow}
-              onClick={nextSlide}
-            /> */}
-            <div className={classes.containerDots}>
-              {/* div preko zbog flex-a da budu jedan pored drugih(elementi jer u slider kad stavim ne mogu) */}
+          <section>
+                       <div className={classes.containerDots}>
+          
               {Array.from({ length: mainPageMovies.length }).map(
                 (item, index) => {
                   /*ovdje useEffect ne moze posto je ovdje map sto znaci da bi se za svaki item pokrenuo mzd kad bi stavili na promjenu odredjenog ali otom potom*/
