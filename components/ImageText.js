@@ -124,9 +124,11 @@ const ImageText = () => {
             <h1>{movies[0].title}: Wakanda Forever</h1>
             <p>Wednesday November 11th, 2022</p>
 
-            <button>
-              <FontAwesomeIcon icon={faPlay}></FontAwesomeIcon> Watch trailer
-            </button>
+               <a target='_blank' rel='noreferrer' href={`https://www.youtube.com/watch?v=SfEJruPT5Zw`}>
+              <button>
+                <FontAwesomeIcon icon={faPlay}></FontAwesomeIcon> Watch trailer
+              </button>
+            </a>
             <button
               className={classes.watchListBtn}
               onClick={() => addToWatchList(movies[0])}
