@@ -9,8 +9,6 @@ const Home = () => {
     <div className={classes.bgImage}>
       <Nav />
       <ImageText />
-
-      {/* <img src="" alt="homePage backgroud" className={classes.pantherImage}/**class pantherImage */}
     </div>
   );
 };
