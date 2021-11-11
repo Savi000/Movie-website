@@ -41,14 +41,8 @@ const OneMovieDetail = ({ movie }) => {
                 <button onClick={() => addToWatchList(movie)}>add to watch list</button>
 
             </div>
-            {/* <div className={classes.detailResponsive}>
-                <Image loader={myLoader} src={movie.posterurl} width={1000} height={1000} />
-                <h1>{title}</h1>
-                <p>{storyline}</p>
-                <p>{imdbRating}</p>
-
-            </div> */}
-        </>
+          
+                  </>
 
 
     )
