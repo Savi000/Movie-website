@@ -14,7 +14,7 @@ const WatchList = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                 {watchList.length > 0 && watchList.map(watch => <WatchListMovie key={watch.id} movie={watch} />)}
                 {/* ne mozemo each movie zbog display flex jer onda btn ne moze da se napravi */}
-                {watchList.length <= 0 && <p style={{ color: 'white', fontSize: '36px', position: 'absolute', left: '50%', transform: 'translate(-50%)' }}>no ljeba</p>}
+                {watchList.length <= 0 && <p style={{ color: 'white', fontSize: '36px', position: 'absolute', left: '50%', transform: 'translate(-50%)' }}>No movies</p>}
             </div>
 
         </div >
