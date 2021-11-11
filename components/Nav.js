@@ -105,7 +105,7 @@ const Nav = () => {
             autoFocus={router.pathname === "/movies"} 
             onChange={inputValue}
             onClick={() => router.push("/movies")}
-            placeholder="search for muviii..."
+            placeholder="search for movie..."
           />
         </form>
 
