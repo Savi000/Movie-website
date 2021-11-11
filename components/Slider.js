@@ -5,19 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Slider = ({ movie, index, current }) => {
-  //const img = useRef();
-
-  // const [hover, setHover] = useState(false);
-
-  // const { addToWatchList } = useContext(MovieContext)
-
-
-
-  // const myLoader = ({ src }) => {
-  //   return `images-na.ssl-images-amazon.com`
-  // }
-
-  // <Image loader={myLoader} src={movie.posterurl} alt="travel image" /*.image*/ />
 
   const myLoader = ({ src }) => {
     return (
@@ -30,12 +17,6 @@ const Slider = ({ movie, index, current }) => {
 
     <div className={index === current ? classes.slideActive : classes.slide}>
       {index === current && (
-        /**ref ne radi jer samo stavim za specificnu sliku ove ostale nis tj nemaju ref
-         * probaj posle nes drugo
-        /**  zbog css-a 3 div-a */
-        // <div className={classes.sliderElements}>
-
-
         <div className={classes.sliderElements}>
           <p>{movie.title}</p>
           <div className={classes.sliderImage}>
