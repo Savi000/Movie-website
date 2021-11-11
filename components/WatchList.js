@@ -6,8 +6,7 @@ import WatchListMovie from './WatchListMovie'
 const WatchList = () => {
     const { watchList } = useContext(MovieContext);
 
-    /**NE MOZE U INDEX.JS OD PAGES HOOKS VIDIS USE CONTEXT USE EFFECT STATE,... BILO KOJI HOOK ZATO STO index.js(ne pocinje velikim slovom jedan od parametara da nije) NIJE KOMPONENTA NITI CUSTOM HOOK I NE MOZES DA KORISTIS OVO ZATO PRAVIS KOMPONENTU PA JE RENDERUJES ISPOD KAO JA SAD */
-
+   
     return (
         <div>
             <Nav />
