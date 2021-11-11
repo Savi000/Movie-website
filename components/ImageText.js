@@ -29,8 +29,7 @@ const ImageText = () => {
         return () => {
           clearInterval(timeout);
         };
-      }  /*ne moze use effect conditionally mora da ima jednu default radnnju zato micem ovo else ovdje
-        bilo else{setCurrent(0)}*/
+      }  
       else {
         setCurrent(0);
       }
@@ -107,8 +106,8 @@ const ImageText = () => {
               ))}
             </div>
           </div>
-          {/* ovo radi zato sto sad main movies ima samo 2 glavna div-a jer ovaj pripada mainMovie i zato flexujemo samo ova 2 a ovaj about movie sluzi samo za onaj uvijeni background */}
-        </div>
+       
+</div>
 
         <div className={classes.otherMovies}>
           <h4>MOVIE NAME</h4>
@@ -124,7 +123,7 @@ const ImageText = () => {
           
               {Array.from({ length: mainPageMovies.length }).map(
                 (item, index) => {
-                  /*ovdje useEffect ne moze posto je ovdje map sto znaci da bi se za svaki item pokrenuo mzd kad bi stavili na promjenu odredjenog ali otom potom*/
+                  
                   const clickedIndex = () => {
                     setCurrent(index);
                     setStopEffect(true);
