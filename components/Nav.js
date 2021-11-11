@@ -8,7 +8,6 @@ import MovieContext from "../store/movieContext";
 import Image from "next/image";
 
 const Nav = () => {
-  // const [focus, setFocus] = useState(false);
 
   const { inputValue, value } = useContext(MovieContext);
 
@@ -19,9 +18,6 @@ const Nav = () => {
     e.preventDefault();
   };
 
-  // const findMovie = (e) => {
-  //     let inpVal = e.target.value;
-  // }
 
   const myLoader = ({ src }) => {
     return "https://www.pngmart.com/files/13/Avengers-A-Letter-Logo-Transparent-PNG.png";
